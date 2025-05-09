@@ -9,17 +9,30 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: aquamarine;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Garantir que a página ocupe toda a altura da tela */
         }
-        
-        div {
+
+        /* Container principal */
+        .form-container {
             background-color: rgba(216, 216, 216, 0.8);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             padding: 35px;
             border-radius: 20px;
             color: black;
+            position: relative; /* Para que a imagem fique posicionada dentro deste contêiner */
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Imagem posicionada no canto superior direito dentro do contêiner */
+        .form-container img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; /* Tamanho ajustável */
+            height: 50px; /* Tamanho ajustável */
         }
 
         input {
@@ -27,6 +40,8 @@
             border: none;
             outline: none;
             font-size: 20px;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         button {
@@ -37,6 +52,7 @@
             color: white;
             font-size: 15px;
             cursor: pointer;
+            width: 100%;
         }
 
         button:hover {
@@ -50,44 +66,30 @@
             gap: 2rem;
             font-size: 14px;
         }
-
-        /* Adicionando o link com a imagem no canto superior direito */
-        .top-right-link {
-            position: fixed;
-            top: 10px; /* Distância do topo */
-            right: 10px; /* Distância da direita */
-            z-index: 1000; /* Garantir que fique acima de outros elementos */
-        }
-
-        .top-right-link img {
-            width: 50px; /* Ajuste o tamanho da imagem */
-            height: 50px; /* Ajuste o tamanho da imagem */
-        }
     </style>
 </head>
 <body>
-    <!-- Link com a imagem no canto superior direito -->
-    <a href="https://i.imgur.com/IsZc15M.jpeg" class="top-right-link">
-        <img src="https://i.imgur.com/IsZc15M.jpeg" alt="Imagem no topo direito">
-    </a>
+    <div class="form-container">
+        <!-- Imagem no canto superior direito do formulário -->
+        <a href="https://i.imgur.com/IsZc15M.jpeg">
+            <img src="https://i.imgur.com/IsZc15M.jpeg" alt="Imagem no topo direito">
+        </a>
 
-    <div>
         <h1>OBRA APP</h1>
         <h2>Login</h2>
         <input type="text" placeholder="Email">
-        <br><br>
         <input type="password" placeholder="Senha">
-        <br><br>
+        
         <nav>
             <ul>
                 <li><a href="#esqueci minha senha">Esqueci Minha Senha</a></li>
-                <li> entre em contato
+                <li> entre em contato 
                     <br>
                     suporte.obraapp@gmail.com
                 </li>
             </ul>
         </nav>
-        <br>
+
         <button>Enviar</button>
     </div>
 </body>
