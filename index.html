@@ -1,78 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>obraapp</title>
+    <title>OBRA APP</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: aquamarine;
+        /* Resetando o estilo padrão */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Um azul mais suave */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Garantir que a página ocupe toda a altura da tela */
+            height: 100vh;
         }
 
         /* Container principal */
         .form-container {
-            background-color: rgba(216, 216, 216, 0.8);
-            padding: 35px;
-            border-radius: 20px;
-            color: black;
-            position: relative; /* Para que a imagem fique posicionada dentro deste contêiner */
-            width: 300px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Imagem posicionada no canto superior direito dentro do contêiner */
+        /* Imagem no canto superior direito */
         .form-container img {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 50px; /* Tamanho ajustável */
-            height: 50px; /* Tamanho ajustável */
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
-        input {
-            padding: 16px;
-            border: none;
-            outline: none;
-            font-size: 20px;
-            width: 100%;
+        .form-container img:hover {
+            transform: scale(1.1); /* Aumenta um pouco a imagem quando o mouse passa por cima */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
             margin-bottom: 10px;
         }
 
-        button {
-            background-color: deepskyblue;
-            border: none;
-            padding: 16px;
-            border-radius: 10px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
+        h2 {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        input {
             width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #3498db; /* Destaque azul quando o campo for focado */
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: blue;
+            background-color: #2980b9; /* Efeito de hover no botão */
         }
 
         nav ul {
             list-style-type: none;
-            display: flex;
-            justify-content: left;
-            gap: 2rem;
+            margin-top: 20px;
             font-size: 14px;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 30px;
+                width: 90%;
+            }
+
+            .form-container img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            button {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="form-container">
         <!-- Imagem no canto superior direito do formulário -->
-        <a href="https://i.imgur.com/IsZc15M.jpeg">
-            <img src="https://i.imgur.com/IsZc15M.jpeg" alt="Imagem no topo direito">
+        <a href="https://i.imgur.com/IsZc15M.jpeg" target="_blank">
+            <img src="https://i.imgur.com/IsZc15M.jpeg" alt="Logo do Obra App">
         </a>
 
         <h1>OBRA APP</h1>
@@ -82,15 +148,12 @@
         
         <nav>
             <ul>
-                <li><a href="#esqueci minha senha">Esqueci Minha Senha</a></li>
-                <li> entre em contato 
-                    <br>
-                    suporte.obraapp@gmail.com
-                </li>
+                <li><a href="#esqueci minha senha">Esqueci minha senha?</a></li>
+                <li>Entre em contato: <a href="mailto:suporte.obraapp@gmail.com">suporte.obraapp@gmail.com</a></li>
             </ul>
         </nav>
 
-        <button>Enviar</button>
+        <button>Entrar</button>
     </div>
 </body>
 </html>
